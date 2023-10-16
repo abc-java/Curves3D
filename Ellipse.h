@@ -1,14 +1,18 @@
-//
-// Created by maksim on 16.10.23.
-//
+#pragma once
 
-#ifndef CURVES3D_ELLIPSE_H
-#define CURVES3D_ELLIPSE_H
+#include <cmath>
 
+#include "Curve.h"
+#include <stdexcept>
 
-class Ellipse {
-
+class Ellipse : public Curve {
+public:
+    Ellipse(double rx, double ry);
+    Point3D GetPoint(double t) override;
+    Vector3D GetDerivative(double t) override;
+    double GetRX() const;
+    double GetRY() const;
+private:
+    double rx;
+    double ry;
 };
-
-
-#endif //CURVES3D_ELLIPSE_H

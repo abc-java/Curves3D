@@ -1,14 +1,16 @@
-//
-// Created by maksim on 16.10.23.
-//
+#pragma once
 
-#ifndef CURVES3D_HELIX_H
-#define CURVES3D_HELIX_H
+#include "Curve.h"
+#include <cmath>
 
-
-class Helix {
-
+class Helix : public Curve {
+public:
+    Helix(double radius, double step);
+    Vector3D GetDerivative(double t) override;
+    Point3D GetPoint(double t) override;
+    double GetRadius() const;
+    double GetStep() const;
+private:
+    double radius;
+    double step;
 };
-
-
-#endif //CURVES3D_HELIX_H

@@ -1,14 +1,17 @@
-//
-// Created by maksim on 16.10.23.
-//
+#pragma once
 
-#ifndef CURVES3D_CIRCLE_H
-#define CURVES3D_CIRCLE_H
+#include <cmath>
 
 
-class Circle {
+#include "Curve.h"
 
+class Circle : public Curve{
+public:
+    explicit Circle(double radius);
+    Point3D GetPoint(double t) override;
+    Vector3D GetDerivative(double t) override;
+    double GetRadius() const;
+private:
+    double radius;
 };
 
-
-#endif //CURVES3D_CIRCLE_H
