@@ -10,7 +10,9 @@ public:
     Point3D GetPoint(double t) override;
     double GetRadius() const;
     double GetStep() const;
+    std::string GetType() const override;
 private:
     double radius;
     double step;
+    std::string type;
 };

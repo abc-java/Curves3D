@@ -1,6 +1,6 @@
 #include "Circle.h"
 
-Circle::Circle(double radius) : radius(radius){
+Circle::Circle(double radius) : radius(radius), type("Circle"){
     if (radius <= 0) {
         throw std::invalid_argument("Circle: radius <= 0");
     }
@@ -20,4 +20,8 @@ Vector3D Circle::GetDerivative(double t) {
 
 double Circle::GetRadius() const {
     return radius;
+}
+
+std::string Circle::GetType() const {
+    return type;
 }

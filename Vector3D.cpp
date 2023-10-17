@@ -4,7 +4,7 @@
 
 #include "Vector3D.h"
 
-Vector3D::Vector3D(double x, double y, double z) : point({x, y, z}) {
+Vector3D::Vector3D(double x, double y, double z = 0) : point({x, y, z}) {
 
 }
 

@@ -1,7 +1,7 @@
 #include "Helix.h"
 
 
-Helix::Helix(double radius, double step) : radius(radius), step(step){
+Helix::Helix(double radius, double step) : radius(radius), step(step), type("Helix"){
     if (radius <= 0) {
         throw std::invalid_argument("Helix: radius <= 0");
     }
@@ -30,4 +30,8 @@ double Helix::GetRadius() const {
 
 double Helix::GetStep() const {
     return step;
+}
+
+std::string Helix::GetType() const {
+    return type;
 }

@@ -1,6 +1,6 @@
 #include "Ellipse.h"
 
-Ellipse::Ellipse(double rx, double ry) : rx(rx), ry(ry){
+Ellipse::Ellipse(double rx, double ry) : rx(rx), ry(ry), type("Ellipse"){
     if (rx <= 0) {
         throw std::invalid_argument("Ellipse: RX <= 0");
     }
@@ -27,4 +27,8 @@ double Ellipse::GetRX() const {
 
 double Ellipse::GetRY() const {
     return ry;
+}
+
+std::string Ellipse::GetType() const {
+    return type;
 }
