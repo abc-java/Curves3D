@@ -1,10 +1,13 @@
 #include "Test.h"
 
 void Test() {
-    TestCircle();
-    TestEllipse();
-    TestHelix();
+    TestRunner tr;
+    RUN_TEST(tr, TestHelix);
+    RUN_TEST(tr, TestEllipse);
+    RUN_TEST(tr, TestCircle);
 }
+
+
 
 void TestCircle() {
     double PI = 3.1415926535;

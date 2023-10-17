@@ -2,13 +2,14 @@
 #include <vector>
 #include <memory>
 #include <algorithm>
+#include <random>
 
 #include "Curve.h"
 #include "Circle.h"
 #include "Ellipse.h"
 #include "Helix.h"
 #include "Test.h"
-#include "test_runner.h"
+
 
 
 
@@ -37,11 +38,11 @@ std::shared_ptr<Curve> GetRandomCurvePtr() {
 }
 
 int main() {
+    Test();
+
     static int COUNT_ELEM = 10;
     static double PI = 3.1415926535;
 
-    TestRunner tr;
-    RUN_TEST(tr, Test);
 
     srand(time(nullptr));
 

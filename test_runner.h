@@ -82,7 +82,7 @@ public:
             ++fail_count;
             std::cerr << "Unknown exception caught" << std::endl;
         }
-    }
+        }
 
     ~TestRunner() {
         if (fail_count > 0) {
