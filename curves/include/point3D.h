@@ -8,3 +8,4 @@ struct Point3D {
 };
 
 std::ostream& operator<<(std::ostream& out, const Point3D& point);
+bool operator==(const Point3D& lhs, const Point3D& rhs);

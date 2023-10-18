@@ -196,12 +196,3 @@ void TestHelix() {
         ASSERT_EQUAL(expected, h.GetDerivative((3*PI)/2));
     }
 }
-
-bool operator==(const Point3D& lhs, const Point3D& rhs) {
-    double eps = 1e-7;
-    return (std::abs(lhs.x - rhs.x) < eps) && (std::abs(lhs.y - rhs.y) < eps) && (std::abs(lhs.z - rhs.z) < eps);
-}
-
-bool operator==(const Vector3D& lhs, const Vector3D& rhs) {
-    return lhs.GetPoint() == rhs.GetPoint();
-}

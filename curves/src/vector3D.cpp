@@ -33,3 +33,7 @@ std::ostream& operator<<(std::ostream& out, const Vector3D& vector) {
     out << "Vector3D(" << point.x << ", " << point.y << ", " << point.z << ")";
     return out;
 }
+
+bool operator==(const Vector3D& lhs, const Vector3D& rhs) {
+    return lhs.GetPoint() == rhs.GetPoint();
+}

@@ -18,3 +18,4 @@ private:
 };
 
 std::ostream& operator<<(std::ostream& out, const Vector3D& vector);
+bool operator==(const Vector3D& lhs, const Vector3D& rhs);
