@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include "Point3D.h"
+#include "point3D.h"
 
 
 class Vector3D {

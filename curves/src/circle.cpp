@@ -1,6 +1,6 @@
-#include "Circle.h"
+#include "circle.h"
 
-Circle::Circle(double radius) : radius(radius), type("Circle"){
+Circle::Circle(double radius) : radius(radius) {
     if (radius <= 0) {
         throw std::invalid_argument("Circle: radius <= 0");
     }

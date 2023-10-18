@@ -2,8 +2,8 @@
 
 #include <string>
 
-#include "Point3D.h"
-#include "Vector3D.h"
+#include "point3D.h"
+#include "vector3D.h"
 
 
 class Curve {

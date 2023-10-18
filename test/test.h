@@ -3,10 +3,10 @@
 #include <cmath>
 
 #include "test_runner.h"
-#include "Circle.h"
-#include "Curve.h"
-#include "Ellipse.h"
-#include "Helix.h"
+#include "circle.h"
+#include "curve.h"
+#include "ellipse.h"
+#include "helix.h"
 
 void Test();
 void TestCircle();

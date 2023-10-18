@@ -1,7 +1,7 @@
-#include "Helix.h"
+#include "helix.h"
 
 
-Helix::Helix(double radius, double step) : radius(radius), step(step), type("Helix"){
+Helix::Helix(double radius, double step) : radius(radius), step(step) {
     if (radius <= 0) {
         throw std::invalid_argument("Helix: radius <= 0");
     }

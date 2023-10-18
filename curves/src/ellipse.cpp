@@ -1,6 +1,6 @@
-#include "Ellipse.h"
+#include "ellipse.h"
 
-Ellipse::Ellipse(double rx, double ry) : rx(rx), ry(ry), type("Ellipse"){
+Ellipse::Ellipse(double rx, double ry) : rx(rx), ry(ry) {
     if (rx <= 0) {
         throw std::invalid_argument("Ellipse: RX <= 0");
     }

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Curve.h"
+#include "curve.h"
 #include <cmath>
 
 class Helix : public Curve {
@@ -14,5 +14,5 @@ public:
 private:
     double radius;
     double step;
-    std::string type;
+    constexpr static auto type = "Helix";
 };

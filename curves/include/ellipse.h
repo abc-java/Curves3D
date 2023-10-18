@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-#include "Curve.h"
+#include "curve.h"
 #include <stdexcept>
 
 class Ellipse : public Curve {
@@ -17,5 +17,5 @@ public:
 private:
     double rx;
     double ry;
-    std::string type;
+    constexpr static auto type = "Ellipse";
 };

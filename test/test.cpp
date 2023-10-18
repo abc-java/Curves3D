@@ -1,4 +1,4 @@
-#include "Test.h"
+#include "test.h"
 
 void Test() {
     TestRunner tr;
@@ -171,17 +171,17 @@ void TestHelix() {
         Point3D expected{1, 0, 0};
         ASSERT_EQUAL(expected, h.GetPoint(0));
 
-        expected = Point3D{-1, 0, 2*PI};
+        expected = Point3D{-1, 0, 2 * PI};
         ASSERT_EQUAL(expected, h.GetPoint(PI))
 
-        expected = Point3D{0, 1, 2*(PI/2)};
+        expected = Point3D{0, 1, 2 * (PI / 2)};
         ASSERT_EQUAL(expected, h.GetPoint(PI/2));
 
-        expected = Point3D{0, -1, 2*((3*PI)/2)};
+        expected = Point3D{0, -1, 2 * ((3 * PI) / 2)};
         ASSERT_EQUAL(expected, h.GetPoint((3*PI)/2));
     }
     {
-        Helix h(1,2);
+        Helix h(1, 2);
 
         Vector3D expected{0, 1, 2};
         ASSERT_EQUAL(expected, h.GetDerivative(0));

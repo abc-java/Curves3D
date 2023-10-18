@@ -3,7 +3,7 @@
 #include <cmath>
 
 
-#include "Curve.h"
+#include "curve.h"
 
 class Circle : public Curve{
 public:
@@ -14,6 +14,6 @@ public:
     double GetRadius() const;
 private:
     double radius;
-    std::string type;
+    constexpr static auto type = "Circle";
 };
 
