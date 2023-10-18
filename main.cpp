@@ -8,7 +8,6 @@
 #include "circle.h"
 #include "ellipse.h"
 #include "helix.h"
-#include "test.h"
 
 std::shared_ptr<Curve> GetRandomCurvePtr() {
 
@@ -36,7 +35,6 @@ std::shared_ptr<Curve> GetRandomCurvePtr() {
 }
 
 int main() {
-    Test();
 
     constexpr int COUNT_ELEM = 10;
     constexpr double PI = 3.1415926535;
