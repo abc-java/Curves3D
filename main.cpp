@@ -3,6 +3,7 @@
 #include <memory>
 #include <algorithm>
 #include <random>
+#include <omp.h>
 
 #include "curve.h"
 #include "circle.h"
@@ -63,16 +64,20 @@ int main() {
         return lhs->GetRadius() < rhs->GetRadius();
     });
 
-    std::cout << '\n';
+    std::cout << "\nsorted:\n";
 
     for (const auto& circle : circles) {
         std::cout << circle->GetType() << " " << circle->GetRadius() << std::endl;
     }
 
-    double sum_radius = 0; // 6
 
-    for (const auto& circle: circles) {
-        sum_radius += circle->GetRadius();
+    double sum_radius = 0; // 6
+#pragma omp parallel shared(circles) reduction (+: sum_radius) num_threads(2) default(none)
+    {
+#pragma omp for
+        for (const auto &circle: circles) {
+            sum_radius += circle->GetRadius();
+        }
     }
 
     std::cout << "Sum radius: " << sum_radius << std::endl;
